@@ -43,12 +43,14 @@
         #main {
           animation-name:entry;
           animation-duration:1.5s;
+          transition: all .5s ease
         }
         body {
             font-family: Arial;
             background-color:black;
             background-image: linear-gradient(rgba(20,10,20,1), rgba(0,0,0,1));
             color:white;
+            pointer-events: auto;
         }
         .sub {
         	font-family:"pixel";
@@ -98,7 +100,7 @@
         	font-size:15px;
         	line-height:0.5;
         }
-        .header, .subheader {
+        .header, .subheader, #blogheader {
         	font-family:"dos";
         	background-image: linear-gradient(pink, hotpink);
         	-webkit background-clip: text;
@@ -106,7 +108,7 @@
         	color: transparent;
         	line-height:1.5;
         }
-        .header {
+        .header, #blogheader {
         	font-size: 40px;
         	text-shadow: 0.5px 0.5px 20px hotpink;
         }
@@ -123,7 +125,7 @@
         .subheader {
         	font-size: 30px;
         }
-        .standard {
+        .standard, .date, #blogstandard {
         	font-family:"pixel";
         	color: white;
         	font-size:20px;
@@ -173,4 +175,64 @@
           border-radius:5px;
           pointer-events:auto;
         }
-
+        .blogpost {
+          margin:2px;
+          border-left:4px solid pink;
+          width:500px;
+          height:70px;
+          transition: all .5s ease
+          pointer-events:auto;
+        }
+        .blogpost:hover {
+          cursor:pointer;
+        }
+        .blogtitle {
+          color:pink;
+          margin-left:8px;
+          font-size: 18px;
+          font-family:"dos";
+          pointer-events:auto;
+          transition: all .5s ease;
+        }
+        .blogtitle:hover {
+          color:hotpink;
+        }
+        .date {
+          margin-top:-10px;
+          margin-left:8px;
+        }
+        #blogpage {
+          visibility:hidden;
+          opacity:0;
+          position: fixed;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+          width:60%;
+          height:90%;
+          margin:auto;
+          border:2px solid gray;
+          border-radius:5px;
+          background-color:rgba(0,0,0,0.5);
+          z-index:10;
+          transition: all .5s ease;
+        }
+        #blogExit {
+          transition: all .5s ease;
+          border: 1px solid pink;
+          padding: 2px 30px 2px;
+          color:pink;
+          font-family:"pixel";
+        }
+        #blogExit:hover {
+          background-color:pink;
+          color:black;
+          cursor:pointer;
+        }
+        #blogEntry, #blogheader, #blogstandard {
+          margin:20px;
+        }
+        #blogheader {
+          font-size:20px;
+          text-align:center;
+        } 

@@ -3,6 +3,7 @@
 <head>
 	<link rel="icon" type="image/jpg" href="images/favicon.jpeg">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,9 +56,12 @@
     			<p class="sub">^ my own personal rating ^</p></center>
     		</div><br>
     		
-    		<div id="blog" style="height:200px;">
+        <div id="blog" style="height:300px;">
     			<h1 class="header"> ✦ blog</h1>
-    			<p class="sub" style="font-size:20px;">nothing is here yet... ;-;</p>
+          <div class="blogpost">
+            <h2 class="blogtitle" onclick="blogGit()"> > learning git for the first time as a mediocre front-end developer</h2>
+            <p class="date">published: 5/12/2026</p>
+            </div>
     		</div><br>
     	
     		<div id="closer" style="height:390px;text-align:center;">
@@ -76,9 +80,22 @@
     		</div>
     		<p class="standard" style="text-align:center;line-height:1.25;font-size:20px;margin-bottom:200px">this is still wip, nothing here is final!<br>v 0.10</p>
         </div>
-    	
-    	</div>	
-      </div>
-      </div>
+
+
+      </div>	
+  </div>
+        <!-- blog starts here -->
+        <div id="blogpage">
+          <a id="blogExit" onclick="closeBlog()"> exit </a>
+
+          <div class="blogEntry">
+            <h1 id="blogheader"> > title</h1>
+            <p id="blogstandard">bla bla bla bla</p>
+          </div>
+
+        </div>
+
+
+</div>
 </body>
 </html>
