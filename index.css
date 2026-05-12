@@ -1,0 +1,176 @@
+    @font-face {
+    		font-family: 'pixel';
+    		src: url('fonts/pixel.ttf') format('truetype');
+    		font-weight:normal;
+    		font-style:normal;
+    		font-display:swap;
+    	}
+    	@font-face {
+    		font-family: 'dos';
+    		src: url('fonts/dos.ttf') format('truetype');
+    		font-weight:normal;
+    		font-style:normal;
+    		font-display:swap;
+    	}
+      	@keyframes entry {
+          from{filter:blur(5px);opacity:0;};
+          to{filter:blur(0px);opacity:1;};
+        }
+        @keyframes crt {
+          0%,
+          100%, {opacity:1;}
+          50% {opacity:0.92;};
+        }
+        @keyframes separation {
+          0%{text-shadow:0.5px 0 1px rgba(0,30,255,0.2),-0.5px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          10%{text-shadow:2px 0 1px rgba(0,30,255,0.2),-2px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          20%{text-shadow:0.2px 0 1px rgba(0,30,255,0.2),-0.2px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          30%{text-shadow:0.4px 0 1px rgba(0,30,255,0.5),-0.4px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          40%{text-shadow:2.5px 0 1px rgba(0,30,255,0.5),-2.5px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          50%{text-shadow:1.2px 0 1px rgba(0,30,255,0.5),-1.2px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          60%{text-shadow:0.7px 0 1px rgba(0,30,255,0.5),-0.7px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          70%{text-shadow:4px 0 1px rgba(0,30,255,0.5),-4px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          80%{text-shadow:2.3px 0 1px rgba(0,30,255,0.5),-2.3px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          90%{text-shadow:0.6px 0 1px rgba(0,30,255,0.5),-0.6px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+          100%{text-shadow:3px 0 1px rgba(0,30,255,0.5),-3px 0 1px rgba(255,0,80,0.3), 0 0 3px}
+        }
+        #whole {
+          pointer-events:none;
+          background: repeating-linear-gradient(0deg,transparent,transparent 2px, rgba(0,0,0,0.25) 2px, rgba(0,0,0,0.25) 4px);
+          z-index:10;
+          animation: crt 0.08s steps(3) infinite;
+        }
+        #main {
+          animation-name:entry;
+          animation-duration:1.5s;
+        }
+        body {
+            font-family: Arial;
+            background-color:black;
+            background-image: linear-gradient(rgba(20,10,20,1), rgba(0,0,0,1));
+            color:white;
+        }
+        .sub {
+        	font-family:"pixel";
+        	font-size:12px;
+        	color:gray;
+        	line-height:0.5;
+        }
+         #focus {
+        	display:grid;
+        	place-items:center;
+        	padding:50px;
+        	gap:7px;
+        }
+        
+        #closer, #intro, #aotm, #blog {
+        	padding: 10px 15px 10px;
+        	display:block;
+        	background-color:rgba(0,0,0,0.1);
+        	border:2px solid rgba(255,255,255,0.3);
+        	border-radius:10px;
+        	word-wrap: break-word;
+        	width:750px;
+        }
+        #links {
+        	padding: 10px 15px 10px;
+        	display:inline-block;
+        	border:2px solid rgba(255,255,255,0.3);
+        	border-radius:10px;
+        	word-wrap: break-word;
+        	width:250px;
+        }
+        #navbar {
+        	border:2px solid rgba(255,255,255,0.3);
+        	background-color:rgba(0,0,0,0.1);
+        	height:40px;
+        	width:100%
+        }
+        #osaka {
+        	height:150px;
+        	width:80px;
+        }
+        .bigarial {
+        	font-size:25px;
+        	line-height:0.5;
+        }
+        .arial { 
+        	font-size:15px;
+        	line-height:0.5;
+        }
+        .header, .subheader {
+        	font-family:"dos";
+        	background-image: linear-gradient(pink, hotpink);
+        	-webkit background-clip: text;
+        	background-clip: text;
+        	color: transparent;
+        	line-height:1.5;
+        }
+        .header {
+        	font-size: 40px;
+        	text-shadow: 0.5px 0.5px 20px hotpink;
+        }
+        #rating {
+        	font-size:40px;
+        	font-family:"dos";
+        	background-image: linear-gradient(lime, green);
+        	-webkit background-clip: text;
+        	background-clip: text;
+        	color: transparent;
+        	line-height:1;
+          width:100%
+        }
+        .subheader {
+        	font-size: 30px;
+        }
+        .standard {
+        	font-family:"pixel";
+        	color: white;
+        	font-size:20px;
+        	line-height:1.5;
+          animation-name:separation;
+          animation-iteration-count:infinite;
+          animation-duration:2s;
+        }
+        .standardsub {
+        	font-family:"pixel";
+        	color: gray;
+        	font-size:15px;
+        	line-height:1.5;
+        }
+        .link, .movinglink {
+        	font-family:"pixel";
+        	color: hotpink;
+        	font-size:20px;
+        	line-height:1.5;
+        	text-decoration:none;
+          pointer-events:auto;
+          transition: all .5s ease;
+        }
+        .link:hover, .movinglink:hover {
+        	font-family:"pixel";
+        	color: #fe019a;
+        	font-size:20px;
+        	line-height:1.5;
+        	text-decoration:underline;
+        }
+        .movinglink {
+          font-size:20px;
+        }
+        #chiyoSmack {
+        	float:left;
+        	height:150px;
+        	width:150px;
+        	border:3px solid hotpink;
+        	box-shadow:0.5px 0.5px 20px hotpink;
+        	margin-right:25px;
+        }
+        .scroll {
+          z-index:6;
+          width:780px;
+          border-left:2px solid pink;
+          border-right:2px solid pink;
+          border-radius:5px;
+          pointer-events:auto;
+        }
+
