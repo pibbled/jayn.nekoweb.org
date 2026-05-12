@@ -11,4 +11,6 @@ function closeBlog() {
 function blogGit() {
   openBlog();
   document.getElementById("blogheader").innerHTML = '<h1 class="blogheader">learning git for the first time as a mediocre front-end developer</h1>'
+  document.getElementById("blogheader").innerHTML = '<h1 class="blogstandard">learning git for the first time as a mediocre front-end developer</h1>'
+
 }
