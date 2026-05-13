@@ -1,0 +1,5 @@
+"<p class="blogstandard">as you may or may not know, <a href="https://github.com/pibbled/jayn.nekoweb.org" class="link">this website is now open-sourced on github!</a><br>
+this means i had to do something i've been meaning to do for a long time and have been putting off, and that's learning git in order to actually push changes to github!<br>
+honestly i've known ive had to learn git for a while considering it's really important, but i've just had a tendency to push it off because i've always been a bit intimidated by it, but quickly i learned that there's not much toit and it can do a lot with not much work<br>
+honestly, i think it's safe to say i totally get the hype now especially since i work across multiple devices, besides even just having it and keeping track of it i can very quickly and easily work with 1 project across a ton of devices<br>
+i dont think i have anything else to say! if you havent, learn git! it's easy and stupid useful even if you're like me and lonely so you never work on any cooperative projects ;-;</p>"

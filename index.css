@@ -19,7 +19,7 @@
         @keyframes crt {
           0%,
           100%, {opacity:1;}
-          50% {opacity:0.92;};
+          50% {opacity:0.91;};
         }
         @keyframes separation {
           0%{text-shadow:0.5px 0 1px rgba(0,30,255,0.2),-0.5px 0 1px rgba(255,0,80,0.3), 0 0 3px}
@@ -36,7 +36,7 @@
         }
         #whole {
           pointer-events:none;
-          background: repeating-linear-gradient(0deg,transparent,transparent 2px, rgba(0,0,0,0.25) 2px, rgba(0,0,0,0.25) 4px);
+          background: repeating-linear-gradient(0deg,transparent,transparent 2px, rgba(0,0,0,0.5) 2px, rgba(0,0,0,0.25) 4px);
           z-index:10;
           animation: crt 0.08s steps(3) infinite;
         }
@@ -125,7 +125,7 @@
         .subheader {
         	font-size: 30px;
         }
-        .standard, .date, #blogstandard {
+        .standard, .date, #blogstandard, #blogdate {
         	font-family:"pixel";
         	color: white;
         	font-size:20px;
@@ -179,7 +179,7 @@
           margin:2px;
           border-left:4px solid pink;
           width:500px;
-          height:70px;
+          height:fit-content;
           transition: all .5s ease
           pointer-events:auto;
         }
@@ -189,7 +189,7 @@
         .blogtitle {
           color:pink;
           margin-left:8px;
-          font-size: 18px;
+          font-size: 17px;
           font-family:"dos";
           pointer-events:auto;
           transition: all .5s ease;
@@ -209,7 +209,7 @@
           left:50%;
           transform: translate(-50%, -50%);
           width:60%;
-          height:90%;
+          height:fit-content;
           margin:auto;
           border:2px solid gray;
           border-radius:5px;
@@ -223,6 +223,7 @@
           padding: 2px 30px 2px;
           color:pink;
           font-family:"pixel";
+          pointer-events:auto;
         }
         #blogExit:hover {
           background-color:pink;
@@ -232,7 +233,31 @@
         #blogEntry, #blogheader, #blogstandard {
           margin:20px;
         }
+        @keyframes typewriter {
+          from{width:0%}
+          to{width:100%}
+        }
+        @keyframes caret {
+          from, to {border-color:transparent}
+          50%{border-color:pink;}
+        }
         #blogheader {
           font-size:20px;
           text-align:center;
-        } 
+        }
+        #blogdate {
+          text-align:center;
+          margin-top:-20px;
+          font-size:16px;
+         }
+        #adIMG {
+          height:125px;
+          width:780px;
+        }
+        #ad {
+          pointer-events:auto;
+        }
+        .break{
+          flex-basis:100%;
+          height:0;
+        }
