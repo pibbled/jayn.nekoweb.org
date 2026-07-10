@@ -233,6 +233,9 @@
         #blogEntry, #blogheader, #blogstandard {
           margin:20px;
         }
+        #blogstandard {
+          line-height:17px;
+        }
         @keyframes typewriter {
           from{width:0%}
           to{width:100%}
